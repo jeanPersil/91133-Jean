@@ -1,0 +1,101 @@
+/* Zera as configs padroes da pagina*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* zera as bordas */
+}
+
+html{
+    scroll-behavior: smooth;
+    transition: 200ms;
+}
+
+body {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+#font-type {
+  font-family: serif;
+}
+
+header {
+  background-color: white;
+  margin: 30px;
+  padding: 20px;
+  border-radius: 15px;
+}
+
+ul li {
+  list-style: none;
+  display: inline;
+  height: 50px;
+  margin: 10px;
+  background-color: #ffc300; /* Amarelo Esportivo */
+  padding: 15px;
+  border-radius: 15px;
+}
+
+li a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  font-size: 18pt;
+}
+
+ul li:hover {
+  background-color: #d00000; /* Vermelho Supra */
+  padding: 19px;
+  transition: 0.1s;
+}
+
+section {
+  margin: 30px;
+}
+
+#carros {
+  display: block;
+}
+
+#carros article {
+  text-align: left;
+  padding: 15px;
+  background-color: #ffffff;
+  border: solid 2px #121212;
+  margin-left: auto;
+  border-radius: 15px;
+}
+
+#carros article img {
+  width: 300px;
+  display: block;
+  margin-right: 20px;
+}
+
+#carros p {
+  font-family: "Bebas Neue", sans-serif;
+  color: #121212;
+}
+
+a {
+  color: #d00000;
+}
+
+a:hover {
+  color: #ffc300;
+}
+
+footer {
+  margin: 30px;
+
+}
+
+footer div {
+  text-align: center;
+  background-color: grey;
+}
+
+footer div h2 {
+  font-size: 11pt;
+}
