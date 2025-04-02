@@ -1,0 +1,148 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+}
+.cabecalho {
+  grid-area: cabecalho;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: rgba(255, 208, 0);
+  gap: 20px;
+  border-bottom: solid 4px orange;
+}
+
+.logo {
+  height: 200px;
+  width: 200px;
+}
+
+.cabecalho img {
+  width: 100%;
+}
+
+.cabecalho ul {
+  display: flex;
+  list-style: none;
+}
+
+.cabecalho li {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.cabecalho a {
+  text-decoration: none;
+  color: black;
+  font-size: 15pt;
+}
+
+.cabecalho a:hover {
+  color: orange;
+  transition: 0.2s;
+}
+
+.conteudo {
+  grid-area: conteudo;
+}
+
+.bem-vindo {
+  background-image: url(/petshop/image/logo.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 42.4vh;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.bem-vindo h1 {
+  color: white;
+  font-size: 50pt;
+}
+
+.bem-vindo p {
+  position: relative;
+  color: white;
+  top: 90px;
+  padding: 15px;
+  background-color: rgb(0, 0, 0, 0.5);
+  border-radius: 15px;
+}
+
+.sobre {
+  display: flex;
+  flex-direction: column;
+  padding: 40px;
+}
+
+.sobre h1 {
+  color: orange;
+  font-weight: bold;
+  font-size: 40px;
+  margin-bottom: 25px;
+}
+
+.sobre h3 {
+  color: grey;
+}
+
+.em-volta {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(249, 243, 235);
+  height: 300px;
+  border-radius: 10px;
+  width: 193vh;
+}
+.rodape {
+  grid-area: rodape;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(255, 208, 0);
+  border-top: solid 4px orange;
+}
+
+.rodape p {
+  color: rgb(65, 63, 63);
+}
+
+a{
+  text-decoration: none;
+  color: white;
+}
+
+button {
+  margin-top: 20px;
+  background-color: orange;
+  color: white;
+  padding: 10px;
+  border-radius: 6px;
+  border: none;
+  font-weight: bold;
+}
+
+button:hover {
+  background-color: rgba(202, 202, 25, 0.797);
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+body {
+  display: grid;
+  height: 100vh;
+  grid-template-columns: 1fr;
+  grid-template-rows: 28.5vh 3fr 65px;
+  grid-template-areas:
+    "cabecalho"
+    "conteudo"
+    "rodape";
+}

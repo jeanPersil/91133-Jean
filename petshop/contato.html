@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>contato</title>
+    <link rel="stylesheet" href="style/contato.css" />
+  </head>
+  <body>
+    <header class="cabecalho">
+      <div class="logo">
+        <img src="image/pet-logo.jpg" alt="logoPetshop" />
+      </div>
+
+      <nav>
+        <ul>
+          <li><a href="petshop.html">Inicio</a></li>
+          <li><a href="servicos.html">Serviços</a></li>
+          <li><a href="sobre.html"> Sobre Nós</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <h1>Fale conosco</h1>
+
+      <form>
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" required />
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" required />
+
+        <label for="mensagem">Mensagem:</label>
+        <textarea id="mensagem" required></textarea>
+
+        <button type="submit" id="entrar">Enviar</button>
+      </form>
+
+      <h1>Ou fale diretamente pelo WhatsApp</h1>
+      <div class="whatsapp-btn">
+        <img
+          src="image/whatsapp.png"
+          alt="WhatsApp Logo"
+          class="whatsapp-icon"
+        />
+        <a href="https://wa.me/7599755098">Enviar mensagem no WhatsApp</a>
+      </div>
+    </main>
+
+    <footer class="rodape">
+      <p>© 2024 Pet Shop Alegria Animal. Todos os direitos reservados.</p>
+    </footer>
+  </body>
+</html>
