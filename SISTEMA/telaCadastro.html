@@ -4,70 +4,71 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tela cadastro</title>
-
-    <style>
-      .cabecalho {
-        display: flex;
-        flex-direction: row;
-        justify-content: flex-start;
-        align-items: center;
-      }
-
-      .imagemLogin {
-        height: 90px;
-        width: 80px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      }
-
-      .imagemLogin img {
-        width: 100%;
-      }
-
-      .texto-ao-lado {
-        font-size: 1.2rem;
-        color: #333;
-        text-align: center;
-      }
-
-      .cabecalho h1 {
-        margin: 0 auto;
-        font-size: 1.5rem;
-      }
-    </style>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style/telacadastro.css" />
   </head>
   <body>
     <header class="cabecalho">
-      <div class="imagemLogin">
+      <div class="imagem">
         <img
           src="img/pngtree-male-avatar-vector-icon-png-image_691595-removebg-preview.png"
           alt="foto"
         />
-        <div class="texto-ao-lado">Jean</div>
+        <p nomeDoUsuario class="texto-ao-lado"></p>
       </div>
+
       <h1>Sistema cadProd - 1.0</h1>
+
+      <button logout>
+        <img
+          src="img/images__1_-removebg-preview.png"
+          alt="Ícone"
+          width="24"
+          height="24"
+        />
+        Sair
+      </button>
     </header>
 
     <div class="container">
-      <h1>Cadastro produto</h1>
+      <h1>Calcular preço</h1>
       <form action="" id="cadastroProduto">
-        <div class="cadastrar">
-          <label for="label">Produto</label>
-          <input type="text" name="produto" id="produto" />
+        <div class="inputs">
+          <div class="cadastrar">
+            <label for="label">Produto</label>
+            <input type="text" name="produto" id="produto" />
+          </div>
+
+          <div class="cadastrar">
+            <label for="label">Quantidade</label>
+            <input type="number" name="quantidade" id="quantidade" />
+          </div>
+
+          <div class="cadastrar">
+            <label for="label">Preço (R$)</label>
+            <input type="number" name="preco" id="preco" step="0.01" />
+          </div>
         </div>
 
         <div class="cadastrar">
-          <label for="label">Quantidade</label>
-          <input type="text" name="quantidade" id="quantidade" />
+          <label for="label"> Resultado </label>
+          <input
+            type="number"
+            name="resultado"
+            id="resultado"
+            placeholder="0"
+            readonly
+          />
         </div>
-
-        <div class="cadastrar">
-          <label for="label">Preço (R$)</label>
-          <input type="text" name="preco" id="preco" />
+        <div class="botoes">
+          <button botaoCalc class="botaoCalcular">Calcular</button>
+          <button botaoLimpar class="botaoLimpar">Limpar</button>
         </div>
-        <span total> 500conto </span>
       </form>
     </div>
+    <script src="scripts/script2.js"></script>
   </body>
 </html>

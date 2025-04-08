@@ -1,0 +1,151 @@
+* {
+  font-style: italic;
+  font-family: "Poppins", sans-serif;
+}
+.cabecalho {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(11, 124, 238);
+  border-radius: 10px;
+}
+
+.cabecalho button {
+  display: flex;
+  align-items: center;
+  background-color: lightcoral;
+  border: none;
+  padding: 10px;
+  width: 100px;
+  height: 35px;
+  border-radius: 10px;
+  gap: 5px;
+  margin-right: 10px;
+  color: white;
+  transition: 0.2s;
+}
+
+.cabecalho button:hover {
+  cursor: pointer;
+  height: 50px;
+  width: 110px;
+  transition: 0.2s;
+}
+
+.imagem {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-left: 20px;
+  max-width: 250px;
+  overflow: hidden;
+}
+
+.imagem img {
+  height: 60px;
+  width: 60px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.texto-ao-lado {
+  font-size: 1.2rem;
+  color: white;
+  text-align: center;
+  margin: 0;
+}
+
+.cabecalho h1 {
+  margin: 0 auto;
+  font-size: 1.5rem;
+  color: white;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgb(11, 124, 238);
+  height: 30vh;
+  width: 70vh;
+  border: solid 1px black;
+  border-radius: 10px;
+}
+
+.container h1 {
+  color: white;
+}
+
+#cadastroProduto {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.inputs {
+  display: flex;
+}
+
+.cadastrar {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 5px;
+
+  margin-left: 10px;
+}
+
+label {
+  color: white;
+}
+
+input {
+  border-radius: 10px;
+  border: none;
+  width: 150px;
+}
+
+#resultado {
+  border-radius: 10px;
+  border: none;
+  width: 480px;
+}
+
+.botoes {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  display: flex;
+  gap: 5px;
+}
+
+.botaoCalcular {
+  background-color: lightgreen;
+  color: black;
+  font-weight: 600;
+  border: none;
+  width: 120px;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+
+.botaoLimpar {
+  background-color: lightcoral;
+  color: white;
+  font-weight: 600;
+  border: none;
+  width: 170px;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+
+.botaoCalcular:hover {
+  cursor: pointer;
+}
+
+.botaoLimpar:hover {
+  cursor: pointer;
+}
