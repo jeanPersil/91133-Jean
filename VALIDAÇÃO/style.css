@@ -1,0 +1,47 @@
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: antiquewhite;
+  height: 27vh;
+  width: 30vh;
+  border-radius: 10px;
+  border: solid 2px black;
+}
+
+#loginFrom{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+  margin: 15px;
+}
+
+
+#loginFrom button{
+    background-color: lightskyblue;
+    width: 130px;
+    height: 3vh;
+    border-radius: 10px;
+    border: none;
+    font-weight: 700;
+}
+
+#loginFrom button:hover{
+    background-color: aqua;
+    cursor: pointer;
+    
+}
