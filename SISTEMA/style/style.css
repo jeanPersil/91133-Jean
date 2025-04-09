@@ -81,10 +81,10 @@ input {
   cursor: pointer;
 }
 
-button:disabled {
-  background-color: gray;
-  cursor: not-allowed;
-  opacity: 0.6;
+.erro{
+  color: red;
+  font-weight: 700;
+  font-size: 11pt;
 }
 
 

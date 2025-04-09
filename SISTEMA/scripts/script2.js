@@ -1,7 +1,9 @@
 const nomeDoUsuario = document.querySelector("[nomeDoUsuario]");
 const username = localStorage.getItem("username");
 const botaoLimpar = document.querySelector("[botaoLimpar]");
+const botaoCalc = document.querySelector("[botaoCalc]");
 const botaoLogout = document.querySelector("[logout]");
+const msgErro = document.querySelector("[erro]");
 
 if (username) {
   nomeDoUsuario.textContent = username;
@@ -11,34 +13,7 @@ if (username) {
 
 document
   .getElementById("cadastroProduto")
-  .addEventListener("submit", (event) => {
-    event.preventDefault();
-
-    const preco = document.getElementById("preco").value;
-    const quantidade = document.getElementById("quantidade").value;
-    const resultado = document.getElementById("resultado");
-    const botaoCalcular = document.querySelector("[botaoCalc]");
-
-    if (preco < 0) {
-      alert("Insira um preço valido");
-      document.getElementById("preco").style.border = "solid 3px red";
-      return;
-    }
-
-    document.getElementById("preco").style.border = "none";
-
-    if (
-      !isNaN(preco) &&
-      !isNaN(quantidade) &&
-      preco !== "" &&
-      quantidade !== ""
-    ) {
-      const total = preco * quantidade;
-      resultado.value = total.toFixed(2);
-    } else {
-      alert("Preencha os campos necessários!");
-    }
-  });
+  .addEventListener("submit", (event) => {});
 
 botaoLimpar.addEventListener("click", (event) => {
   event.preventDefault();
@@ -46,6 +21,40 @@ botaoLimpar.addEventListener("click", (event) => {
   document.getElementById("quantidade").value = "";
   document.getElementById("preco").value = "";
   document.getElementById("resultado").value = "";
+  msgErro.textContent = "";
+});
+
+botaoCalc.addEventListener("click", (event) => {
+  event.preventDefault;
+
+  const preco = document.getElementById("preco").value;
+  const quantidade = document.getElementById("quantidade").value;
+  const resultado = document.getElementById("resultado");
+
+  if (preco < 0 || quantidade < 0) {
+    msgErro.textContent =
+      "Insira valores validos nos campos: PREÇO E QUANTIDADE";
+    document.getElementById("preco").style.border = "solid 3px red";
+    document.getElementById("quantidade").style.border = "solid 3px red";
+    resultado.value = "";
+    return;
+  }
+
+  document.getElementById("preco").style.border = "none";
+  document.getElementById("quantidade").style.border = "none";
+
+  if (
+    !isNaN(preco) &&
+    !isNaN(quantidade) &&
+    preco !== "" &&
+    quantidade !== ""
+  ) {
+    msgErro.textContent = "";
+    const total = preco * quantidade;
+    resultado.value = total.toFixed(2);
+  } else {
+    msgErro.textContent = "Preencha os campos necessarios: PREÇO e QUANTIDADE";
+  }
 });
 
 botaoLogout.addEventListener("click", (event) => {

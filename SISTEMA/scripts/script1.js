@@ -1,22 +1,39 @@
-document.getElementById("loginform").addEventListener("submit", (event) => {
-  event.preventDefault();
+function esperar(ms) {
+  return new Promise((resolve) => setTimeout(resolve, ms));
+}
 
-  username = document.getElementById("username").value.trim();
-  password = document.getElementById("password").value.trim();
-  botao = document.getElementById("botao");
+async function executar() {
+  console.log("Antes da pausa");
 
-  if (!password || !username) {
-    alert("Preencha todos os caracteres");
-    return;
-  }
+  await esperar(3000);
 
-  if (password.length < 8) {
-    alert("A senha precisa ter pelo menos 8 caracteres");
-    return;
-  }
+  console.log("Depois da pausa");
+}
 
-  localStorage.setItem("username", username);
+document
+  .getElementById("loginform")
+  .addEventListener("submit", async (event) => {
+    event.preventDefault();
 
-  window.location.href = "telaCadastro.html";
-  alert("Login bem sucedido");
-});
+    const username = document.getElementById("username").value.trim();
+    const password = document.getElementById("password").value.trim();
+    const msgErro = document.querySelector("[erro]");
+
+    if (!password || !username) {
+      msgErro.textContent = "Por favor preencha todos os campos acima.";
+      return;
+    }
+
+    if (password.length < 8) {
+      msgErro.textContent = "A senha precisa ter pelo menos 8 caracteres";
+      return;
+    }
+
+    msgErro.textContent = "Login bem sucedido!!";
+    msgErro.style.color = "lightgreen";
+
+    await executar();
+
+    localStorage.setItem("username", username);
+    window.location.href = "telaCadastro.html";
+  });

@@ -35,7 +35,7 @@
 
     <div class="container">
       <h1>Calcular preço</h1>
-      <form action="" id="cadastroProduto">
+      <form id="cadastroProduto" method="post" action="cad.php">
         <div class="inputs">
           <div class="cadastrar">
             <label for="label">Produto</label>
@@ -63,11 +63,13 @@
             readonly
           />
         </div>
-        <div class="botoes">
-          <button botaoCalc class="botaoCalcular">Calcular</button>
-          <button botaoLimpar class="botaoLimpar">Limpar</button>
-        </div>
+        <p erro class="erro"></p>
+        <button cadastrar class="cadastro">Cadastrar</button>
       </form>
+      <div class="botoes">
+        <button botaoCalc class="botaoCalcular">Calcular</button>
+        <button botaoLimpar class="botaoLimpar">Limpar</button>
+      </div>
     </div>
     <script src="scripts/script2.js"></script>
   </body>
