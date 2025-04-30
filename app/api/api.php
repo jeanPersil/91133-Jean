@@ -9,11 +9,11 @@ include 'conexao.php';
 
 include 'inserir.php';
 
-include '/view/conecta.php'
+include '/view/conecta.php';
 
 echo "<script>
     alert('Cadastro realizado com sucesso!');
-    window.location.href = 'http://localhost:8081/app/index.html';
+    window.location.href = 'http://localhost:8081/app/cad.html';
 </script>";
 
 ?>

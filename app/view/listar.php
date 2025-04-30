@@ -7,7 +7,7 @@ include 'conecta.php';
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <title>Controle de Estoque</title>
 </head>
@@ -58,7 +58,7 @@ include 'conecta.php';
     ?>
     
     <div class="btn-voltar">
-        <a href="https://localhost:8081/app/cad.html"><button>voltar</button></a>
+        <button onclick="window.location.href='http://localhost:8081/app/cad.html'">voltar</button>
     </div>
 
 </body>

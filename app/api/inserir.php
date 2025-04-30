@@ -14,7 +14,7 @@
     $sql = "INSERT INTO produtos (produto, tipo, quantidade) VALUES (?,?,?)";
 
     $stmt = $conn->prepare($sql);
-    $stmt->bind_param("ssi", $produto, $tipo, $quantidade); // <- corrigido aqui
+    $stmt->bind_param("ssi", $produto, $tipo, $quantidade); 
 
     $stmt->execute();
     $stmt->close();
