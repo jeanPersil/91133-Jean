@@ -1,0 +1,24 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap");
+
+.navegacao a {
+  color: white;
+  padding: 10px 20px;
+}
+
+.navegacao a:hover {
+  color: black;
+  background-color: #e35d7d;
+}
+
+header {
+  width: 100%;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background-color: #f1f5f9; /* opcional: um branco suave */
+}
+
+button:hover {
+  cursor: pointer;
+}
